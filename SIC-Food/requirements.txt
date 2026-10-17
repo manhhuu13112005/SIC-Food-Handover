@@ -1,0 +1,9 @@
+streamlit>=1.65,<2
+ultralytics
+torch
+torchvision
+streamlit-option-menu
+Pillow
+numpy
+opencv-python-headless
+PyYAML

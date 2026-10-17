@@ -1,0 +1,78 @@
+version: 1
+archives_dir: datasets/raw/state_sources/extension_v4/archives
+work_dir: datasets/state_v4_work
+output_dir: datasets/state_v4_candidates
+reports_dir: datasets/reports/state_v4
+reference_datasets:
+  - datasets/efficientnet_v3
+  - datasets/efficientnet_v4_cabbage_candidates
+ingredients: [lettuce, broccoli, onion, eggplant, pork, shrimp]
+states: [normal_appearance, visible_defect]
+split:
+  seed: 42
+  ratios: [0.70, 0.15, 0.15]
+  min_groups_per_class: 10
+  # Split is a proposal only. No files are merged into V3 or moved into splits.
+  min_groups_per_holdout: 2
+audit:
+  phash_distance: 4
+  # Bounds the report, not grouping: all matching hash nodes are still unioned.
+  max_report_pairs: 200000
+  require_reference_audit: true
+zip_limits:
+  max_files: 100000
+  max_total_bytes: 21474836480
+  max_file_bytes: 268435456
+  max_compression_ratio: 2000
+image_limits:
+  max_pixels: 80000000
+  min_crop_size: 16
+# Optional explicit source-group rules. Capture group 1 must identify a video/
+# original acquisition. Rules match a path relative to its source dataset.
+# Without provenance, one classification class folder is treated conservatively
+# as one acquisition group. Edit rules only after reviewing filenames/metadata.
+group_patterns: []
+sources:
+  lettuce:
+    archive: lettuce_clean.zip
+    format: auto
+    approved_mappings:
+      Healthy: lettuce__normal_appearance
+      Rotten Lettuce: lettuce__visible_defect
+  smartveggies:
+    archive: smartveggies.zip
+    format: auto
+    # Verified ZIP contains only train/images + train/labels (1674 images).
+    # Missing val/test stay visible as warnings; no replacement splits are made.
+    optional_missing_splits: [val, test]
+    approved_mappings:
+      Fresh Egg plant: eggplant__normal_appearance
+      RottenEgg plant: eggplant__visible_defect
+      Fresh broccoli: broccoli__normal_appearance
+  onion:
+    archive: onion.zip
+    format: auto
+    approved_mappings:
+      Good Onion: onion__normal_appearance
+      Rotten Onion: onion__visible_defect
+  pork:
+    archive: pork.zip
+    format: auto
+    # Preserves labels such as Kasim/Fresh when folders encode cut + state.
+    classification_label_mode: relative
+    # inspect proposes unambiguous Fresh/Spoiled + cut names, but approval must
+    # use the exact spelling actually discovered in the ZIP.
+    approved_mappings: {}
+    contact_sheet_labels: [Kasim Fresh, Kasim Spoiled, Liempo Fresh, Liempo Spoiled, Pork chop Fresh, Pork chop Spoiled, Tenderloin Fresh, Tenderloin Spoiled]
+    review_images_per_label: 6
+  shrimp:
+    archive: shrimp.zip
+    format: auto
+    # Actual ZIP: valid/_classes.csv, headers "filename, fresh, not".
+    # 126/217 rows activate both fresh and not; semantics need human review.
+    approved_mappings: {}
+    review_labels: [fresh]
+    proposed_mappings:
+      fresh: shrimp__normal_appearance
+# Always withheld even if accidentally added to approved_mappings above.
+blocked_labels: [Larvae, Healthyd, Broccoli, generic Broccoli, Not Pork Meat, Not, Bad]

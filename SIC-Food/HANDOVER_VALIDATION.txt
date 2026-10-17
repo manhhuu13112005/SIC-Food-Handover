@@ -1,0 +1,19 @@
+SIC-Food dataset-free handover — 2026-10-17
+
+Environment: Windows, Python 3.11.15, CPU; direct package versions in requirements-handover.txt.
+PASS: Both delivered checkpoint SHA256 hashes equal the originals.
+PASS: Dataset directory absent in delivered project.
+PASS: Real-model inference with outbound socket connections blocked.
+YOLO: 214 classes; 5 boxes on sample image; 2 boxes on video frame 0.
+EfficientNet: 37 classes; valid probabilities and Top-3 on apple, banana, orange sample images.
+PASS: resource caches reuse both model instances.
+PASS: 51 unit/integration/AppTest tests, 15.498 seconds (final run).
+Test environment: used workspace TEMP/TMP; Streamlit AppTest required local loopback outside sandbox.
+Packaging-only test adjustment: AppTest default timeout increased from 3 to 30 seconds.
+Historical dataset-based model-check entry point adapted to check_handover.py.
+Application source and the two production model files are otherwise copied unchanged.
+Notebook code retained; saved outputs and execution/cell metadata removed.
+Inference checks demonstrate runtime operation, not prediction accuracy.
+A fresh dependency installation on another computer was not tested.
+The MANIFEST excludes itself and this validation report to avoid circular hashing.
+Archive CRC and every manifest file SHA256 are verified after packaging.

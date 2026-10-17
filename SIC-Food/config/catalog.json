@@ -1,0 +1,374 @@
+{
+  "ingredients": {
+    "unknown": {
+      "name": "Chưa xác định",
+      "group": "other"
+    },
+    "pork": {
+      "name": "Thịt lợn",
+      "group": "meat"
+    },
+    "beef": {
+      "name": "Thịt bò",
+      "group": "meat"
+    },
+    "chicken": {
+      "name": "Thịt gà",
+      "group": "meat"
+    },
+    "tomato": {
+      "name": "Cà chua",
+      "group": "produce"
+    },
+    "banana": {
+      "name": "Chuối",
+      "group": "produce"
+    },
+    "bread": {
+      "name": "Bánh mì",
+      "group": "other"
+    },
+    "orange": {
+      "name": "orange",
+      "group": "produce"
+    },
+    "apple": {
+      "name": "apple",
+      "group": "produce"
+    },
+    "strawberry": {
+      "name": "strawberry",
+      "group": "produce"
+    },
+    "grapes": {
+      "name": "grapes",
+      "group": "produce"
+    },
+    "carrot": {
+      "name": "carrot",
+      "group": "produce"
+    },
+    "pancake": {
+      "name": "pancake",
+      "group": "other"
+    },
+    "fries": {
+      "name": "fries",
+      "group": "other"
+    },
+    "zucchini": {
+      "name": "zucchini",
+      "group": "produce"
+    },
+    "broccoli": {
+      "name": "broccoli",
+      "group": "produce"
+    },
+    "pizza": {
+      "name": "pizza",
+      "group": "other"
+    },
+    "pineapple": {
+      "name": "pineapple",
+      "group": "produce"
+    },
+    "bell pepper": {
+      "name": "bell pepper",
+      "group": "produce"
+    },
+    "watermelon": {
+      "name": "watermelon",
+      "group": "produce"
+    },
+    "guacamole": {
+      "name": "guacamole",
+      "group": "other"
+    },
+    "lemon": {
+      "name": "lemon",
+      "group": "produce"
+    },
+    "lentil": {
+      "name": "lentil",
+      "group": "other"
+    },
+    "peas": {
+      "name": "peas",
+      "group": "produce"
+    },
+    "pear": {
+      "name": "pear",
+      "group": "produce"
+    },
+    "waffle": {
+      "name": "waffle",
+      "group": "other"
+    },
+    "spinach": {
+      "name": "spinach",
+      "group": "produce"
+    },
+    "garlic": {
+      "name": "garlic",
+      "group": "produce"
+    },
+    "avocado": {
+      "name": "avocado",
+      "group": "produce"
+    },
+    "cake": {
+      "name": "cake",
+      "group": "other"
+    },
+    "coconut": {
+      "name": "coconut",
+      "group": "produce"
+    },
+    "cheeseburger": {
+      "name": "cheeseburger",
+      "group": "other"
+    },
+    "onion": {
+      "name": "onion",
+      "group": "produce"
+    },
+    "muffin": {
+      "name": "muffin",
+      "group": "other"
+    },
+    "corn": {
+      "name": "corn",
+      "group": "produce"
+    },
+    "lettuce": {
+      "name": "Xà lách",
+      "group": "produce"
+    },
+    "rice": {
+      "name": "rice",
+      "group": "other"
+    },
+    "fish": {
+      "name": "fish",
+      "group": "other"
+    },
+    "potato": {
+      "name": "potato",
+      "group": "produce"
+    },
+    "cucumber": {
+      "name": "cucumber",
+      "group": "produce"
+    },
+    "egg": {
+      "name": "egg",
+      "group": "other"
+    },
+    "cheese": {
+      "name": "cheese",
+      "group": "other"
+    },
+    "milk": {
+      "name": "milk",
+      "group": "other"
+    },
+    "yogurt": {
+      "name": "yogurt",
+      "group": "other"
+    },
+    "butter": {
+      "name": "butter",
+      "group": "other"
+    },
+    "olive oil": {
+      "name": "olive oil",
+      "group": "other"
+    },
+    "pasta": {
+      "name": "pasta",
+      "group": "other"
+    },
+    "sauce": {
+      "name": "sauce",
+      "group": "other"
+    },
+    "salad": {
+      "name": "salad",
+      "group": "other"
+    },
+    "shrimp": {
+      "name": "Tôm",
+      "group": "meat"
+    },
+    "cabbage": {
+      "name": "Bắp cải",
+      "group": "produce"
+    },
+    "bell_pepper": {
+      "name": "Ớt chuông",
+      "group": "produce"
+    },
+    "mushroom": {
+      "name": "Nấm",
+      "group": "produce"
+    }
+  },
+  "class_mapping": {
+    "pork": {
+      "ingredient_id": "pork"
+    },
+    "beef": {
+      "ingredient_id": "beef"
+    },
+    "chicken": {
+      "ingredient_id": "chicken"
+    },
+    "tomato": {
+      "ingredient_id": "tomato"
+    },
+    "banana": {
+      "ingredient_id": "banana"
+    },
+    "bread": {
+      "ingredient_id": "bread"
+    },
+    "orange": {
+      "ingredient_id": "orange"
+    },
+    "apple": {
+      "ingredient_id": "apple"
+    },
+    "strawberry": {
+      "ingredient_id": "strawberry"
+    },
+    "grapes": {
+      "ingredient_id": "grapes"
+    },
+    "carrot": {
+      "ingredient_id": "carrot"
+    },
+    "pancake": {
+      "ingredient_id": "pancake"
+    },
+    "fries": {
+      "ingredient_id": "fries"
+    },
+    "zucchini": {
+      "ingredient_id": "zucchini"
+    },
+    "broccoli": {
+      "ingredient_id": "broccoli"
+    },
+    "pizza": {
+      "ingredient_id": "pizza"
+    },
+    "pineapple": {
+      "ingredient_id": "pineapple"
+    },
+    "bell pepper": {
+      "ingredient_id": "bell_pepper"
+    },
+    "watermelon": {
+      "ingredient_id": "watermelon"
+    },
+    "guacamole": {
+      "ingredient_id": "guacamole"
+    },
+    "lemon": {
+      "ingredient_id": "lemon"
+    },
+    "lentil": {
+      "ingredient_id": "lentil"
+    },
+    "peas": {
+      "ingredient_id": "peas"
+    },
+    "pear": {
+      "ingredient_id": "pear"
+    },
+    "waffle": {
+      "ingredient_id": "waffle"
+    },
+    "spinach": {
+      "ingredient_id": "spinach"
+    },
+    "garlic": {
+      "ingredient_id": "garlic"
+    },
+    "avocado": {
+      "ingredient_id": "avocado"
+    },
+    "cake": {
+      "ingredient_id": "cake"
+    },
+    "coconut": {
+      "ingredient_id": "coconut"
+    },
+    "cheeseburger": {
+      "ingredient_id": "cheeseburger"
+    },
+    "onion": {
+      "ingredient_id": "onion"
+    },
+    "muffin": {
+      "ingredient_id": "muffin"
+    },
+    "corn": {
+      "ingredient_id": "corn"
+    },
+    "lettuce": {
+      "ingredient_id": "lettuce"
+    },
+    "rice": {
+      "ingredient_id": "rice"
+    },
+    "fish": {
+      "ingredient_id": "fish"
+    },
+    "potato": {
+      "ingredient_id": "potato"
+    },
+    "cucumber": {
+      "ingredient_id": "cucumber"
+    },
+    "egg": {
+      "ingredient_id": "egg"
+    },
+    "cheese": {
+      "ingredient_id": "cheese"
+    },
+    "milk": {
+      "ingredient_id": "milk"
+    },
+    "yogurt": {
+      "ingredient_id": "yogurt"
+    },
+    "butter": {
+      "ingredient_id": "butter"
+    },
+    "olive oil": {
+      "ingredient_id": "olive oil"
+    },
+    "pasta": {
+      "ingredient_id": "pasta"
+    },
+    "sauce": {
+      "ingredient_id": "sauce"
+    },
+    "salad": {
+      "ingredient_id": "salad"
+    },
+    "shrimp": {
+      "ingredient_id": "shrimp"
+    },
+    "cabbage": {
+      "ingredient_id": "cabbage"
+    },
+    "bell_pepper": {
+      "ingredient_id": "bell_pepper"
+    },
+    "mushroom": {
+      "ingredient_id": "mushroom"
+    }
+  }
+}

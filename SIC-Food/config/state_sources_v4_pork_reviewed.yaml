@@ -1,0 +1,101 @@
+version: 1
+archives_dir: datasets/raw/state_sources/extension_v4/archives
+work_dir: datasets/state_v4_work
+output_dir: datasets/state_v4_candidates
+reports_dir: datasets/reports/state_v4
+reference_datasets:
+- datasets/efficientnet_v3
+- datasets/efficientnet_v4_cabbage_candidates
+ingredients:
+- lettuce
+- broccoli
+- onion
+- eggplant
+- pork
+- shrimp
+states:
+- normal_appearance
+- visible_defect
+split:
+  seed: 42
+  ratios:
+  - 0.7
+  - 0.15
+  - 0.15
+  min_groups_per_class: 10
+  min_groups_per_holdout: 2
+audit:
+  phash_distance: 4
+  max_report_pairs: 200000
+  require_reference_audit: true
+zip_limits:
+  max_files: 100000
+  max_total_bytes: 21474836480
+  max_file_bytes: 268435456
+  max_compression_ratio: 2000
+image_limits:
+  max_pixels: 80000000
+  min_crop_size: 16
+group_patterns: []
+sources:
+  lettuce:
+    archive: lettuce_clean.zip
+    format: auto
+    approved_mappings:
+      Healthy: lettuce__normal_appearance
+      Rotten Lettuce: lettuce__visible_defect
+  smartveggies:
+    archive: smartveggies.zip
+    format: auto
+    optional_missing_splits:
+    - val
+    - test
+    approved_mappings:
+      Fresh Egg plant: eggplant__normal_appearance
+      RottenEgg plant: eggplant__visible_defect
+      Fresh broccoli: broccoli__normal_appearance
+  onion:
+    archive: onion.zip
+    format: auto
+    approved_mappings:
+      Good Onion: onion__normal_appearance
+      Rotten Onion: onion__visible_defect
+  pork:
+    archive: pork.zip
+    format: auto
+    classification_label_mode: relative
+    approved_mappings:
+      Kasim Fresh: pork__normal_appearance
+      Kasim Spoiled: pork__visible_defect
+      Liempo Fresh: pork__normal_appearance
+      Liempo Spoiled: pork__visible_defect
+      Pork chop Fresh: pork__normal_appearance
+      Pork chop Spoiled: pork__visible_defect
+      Tenderloin Fresh: pork__normal_appearance
+      Tenderloin Spoiled: pork__visible_defect
+    contact_sheet_labels:
+    - Kasim Fresh
+    - Kasim Spoiled
+    - Liempo Fresh
+    - Liempo Spoiled
+    - Pork chop Fresh
+    - Pork chop Spoiled
+    - Tenderloin Fresh
+    - Tenderloin Spoiled
+    review_images_per_label: 6
+  shrimp:
+    archive: shrimp.zip
+    format: auto
+    approved_mappings: {}
+    review_labels:
+    - fresh
+    proposed_mappings:
+      fresh: shrimp__normal_appearance
+blocked_labels:
+- Larvae
+- Healthyd
+- Broccoli
+- generic Broccoli
+- Not Pork Meat
+- Not
+- Bad

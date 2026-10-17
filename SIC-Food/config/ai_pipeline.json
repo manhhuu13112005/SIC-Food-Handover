@@ -1,0 +1,17 @@
+{
+  "architecture": "efficientnet_b0",
+  "image_size": 224,
+  "classification_threshold": 0.6,
+  "ingredient_list_status": "proposed",
+  "ingredients": ["pork", "beef", "chicken", "fish", "shrimp", "egg", "tomato", "banana", "apple", "orange", "carrot", "potato", "cucumber", "broccoli", "cabbage", "lettuce", "bell_pepper", "bread", "mushroom", "rice"],
+  "baseline_states": ["fresh", "defect"],
+  "state_mapping": {
+    "fresh": "fresh_appearing",
+    "defect": "visible_defect",
+    "wilted": "wilted",
+    "bruised": "bruised",
+    "mold": "mold",
+    "spoiled": "suspected_spoiled"
+  },
+  "dataset_targets": {"yolo_min": 6000, "yolo_max": 10000, "efficientnet": 8000}
+}

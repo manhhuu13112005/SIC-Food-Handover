@@ -1,0 +1,10 @@
+# Direct dependencies verified with Python 3.11.15 on Windows CPU.
+streamlit==1.65.0
+ultralytics==8.4.172
+torch==2.14.1
+torchvision==0.29.1
+streamlit-option-menu==0.4.0
+Pillow==12.3.0
+numpy==2.4.6
+opencv-python-headless==5.0.0.93
+PyYAML==6.0.3

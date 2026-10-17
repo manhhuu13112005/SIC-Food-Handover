@@ -1,0 +1,9 @@
+__pycache__/
+
+best.pt
+models/*.pt
+datasets/**/*.jpg
+datasets/**/*.jpeg
+datasets/**/*.png
+datasets/yolo/data.resolved.yaml
+runs/
